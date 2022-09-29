@@ -13,7 +13,7 @@ endif
 CONSOLE=php bin/console
 
 check:
-	$(EXEC)composer check
+	$(EXEC) composer check
 
 csfix:
 	$(EXEC) composer fix
