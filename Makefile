@@ -15,10 +15,20 @@ endif
 # Ligne de commande du projet Symfony
 CONSOLE=php bin/console
 
+<<<<<<< HEAD
 # =========================== #
 # Manipulation des conteneurs #
 # =========================== #
 start: ## Démarrage des conteneurs et affiche les logs en temps réel
+=======
+check:
+	$(EXEC) composer check
+
+csfix:
+	$(EXEC) composer fix
+
+start:
+>>>>>>> 866e948562b4642dd2afb610fd693409f72793d3
 	docker-compose up
 
 start.daemon: ## Démarrage des conteneurs et rend la ligne de commande
@@ -29,6 +39,7 @@ stop: ## Arrête les conteneurs
 
 restart: stop start.daemon ## Arrête et redémarre les conteneurs
 
+<<<<<<< HEAD
 # ===================== #
 # Mise à jour du projet #
 # ===================== #
@@ -51,3 +62,7 @@ check: ## Vérification de la qualité et de la cohérence du code
 
 csfix: ## Correction (automatique) de la qualité du code
 	$(EXEC) composer fix
+=======
+update:
+	$(EXEC) composer install
+>>>>>>> 866e948562b4642dd2afb610fd693409f72793d3
